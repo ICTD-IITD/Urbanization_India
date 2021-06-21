@@ -1,0 +1,119 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.main-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  padding: 10% 10% 10% 10%;
+}
+
+.main-links {
+  display: flex;
+  margin: 20px 0 0 0;
+}
+
+.main-link-item {
+  margin: 0 10px;
+  padding: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.main-link-item:hover {
+  background-color: lightgray;
+}
+
+.category-sections {
+  min-height: 100%;
+  padding: 25px;
+}
+
+.section-container {
+  height: 50%;
+  margin: 20px 0;
+}
+
+.section-large-map {
+  display: flex;
+  margin-left: 20px;
+  justify-content: center;
+}
+.section-description {
+  margin-top: 10px;
+}
+
+.map-radio-btns {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.section-small-maps {
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-maps-label {
+  margin-top: 10px;
+}
+
+.section-2-col {
+  height: 700px;
+  border: 1px solid black;
+}
+
+.section-heading-ques {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.section-inferences {
+  margin-top: 10px;
+}
+
+.section-image {
+  width: 500px;
+  border: 1px solid black;
+  object-fit: cover;
+}
+
+.section-2-image {
+  margin: 3px;
+  width: 270px;
+  border: 1px solid black;
+}
+
+.growable {
+  transition: transform 0.25s ease;
+}
+
+.growable:hover {
+  -webkit-transform: scale(2); /* or some other value */
+  transform: scale(2);
+}
+
+.section-2-maps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.section-3-img {
+  width: 250px;
+  margin-top: 5px;
+  border: 1px solid black;
+}
