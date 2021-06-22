@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <script src="./js/all.js"></script>
     <script src="./js/n2.js"></script>
     <script src="./js/num2.js"></script>
@@ -24,55 +17,33 @@
     <link href="new_style.css" rel="stylesheet" />
 
     <title>Urbanization</title>
-  </head>
-  <body onload="initMap(3)">
+</head>
+
+<body onload="initMap(3)">
     <div id="demo"></div>
     <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container navbar-inner">
-        <p class="navbar-title">
-          <a class="nav-link" href="">Accessibility of Amenities</a>
-        </p>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#topNavbar"
-          aria-controls="topNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <div class="container navbar-inner">
+            <p class="navbar-title">
+                <a class="nav-link" href="">Accessibility of Amenities</a>
+            </p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div
-          class="navbar-collapse collapse w-100 order-3 dual-collapse2"
-          id="topNavbar"
-        >
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="./new_index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./datasets.html">Methodology</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="topNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./new_index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./datasets.html">Methodology</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Categories
               </a>
-              <div
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <a class="dropdown-item" href="./urban.html"
-                  >Categorising Urban Areas</a
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="./urban.html">Categorising Urban Areas</a
                 >
                 <a class="dropdown-item" href="./distribution.html"
                   >Population Distribution in Districts</a
@@ -115,47 +86,15 @@
             >What are the nearest amenity distances for different parts of the
             city?
           </a>
-          <a
-            class="nav-item nav-link"
-            id="nav-home-tab"
-            data-toggle="tab"
-            href="#overall-distance"
-            role="tab"
-            aria-controls="overall-distance"
-            aria-selected="true"
-            >Overall in the city, what are the nearest amenity distances?
+                            <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#overall-distance" role="tab" aria-controls="overall-distance" aria-selected="true">Overall in the city, what are the nearest amenity distances?
           </a>
-          <a
-            class="nav-item nav-link"
-            id="nav-home-tab"
-            data-toggle="tab"
-            href="#worst-distance"
-            role="tab"
-            aria-controls="worst-distance"
-            aria-selected="true"
-            >Which cities have the worst parts that are far away from essential
+                            <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#worst-distance" role="tab" aria-controls="worst-distance" aria-selected="true">Which cities have the worst parts that are far away from essential
             amenities?
           </a>
-          <a
-            class="nav-item nav-link"
-            id="nav-home-tab"
-            data-toggle="tab"
-            href="#outliers"
-            role="tab"
-            aria-controls="outliers"
-            aria-selected="true"
-            >What are these outliers and where do they lie in different parts of
+                            <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#outliers" role="tab" aria-controls="outliers" aria-selected="true">What are these outliers and where do they lie in different parts of
             the city?
           </a>
-          <a
-            class="nav-item nav-link"
-            id="nav-profile-tab"
-            data-toggle="tab"
-            href="#maps"
-            role="tab"
-            aria-controls="maps"
-            aria-selected="false"
-            >Maps</a
+                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#maps" role="tab" aria-controls="maps" aria-selected="false">Maps</a
           >
         </div>
       </nav>
@@ -456,14 +395,10 @@
               href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf"
               ><img src="./images/assets/paper.png" class="research-paper-img"
             /></a>
-          </div>
-          <div class="col-12 col-md-8">
-            To know more, refer to our research paper here : <br />
-            <a
-              target="_blank"
-              style="text-decoration: underline"
-              href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf"
-              >Characterizing The Evolution Of Indian Cities Using Satellite
+                        </div>
+                        <div class="col-12 col-md-8">
+                            To know more, refer to our research paper here : <br />
+                            <a target="_blank" style="text-decoration: underline" href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf">Characterizing The Evolution Of Indian Cities Using Satellite
               Imagery And Open Street Maps</a
             >
 
@@ -481,6 +416,7 @@
 
     <!-- Javascript Files -->
 
+    <script src="./gem-legend.js"></script>
     <script src="./gem-script.js"></script>
     <script src="./gem-cities.js"></script>
     <script src="./gem-fun.js"></script>
