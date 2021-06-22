@@ -67,9 +67,9 @@ function getOpacity(gridNumber) {
         if (gridNumber >= index + gtype[x]) index += gtype[x];
         else {
             if (gtype[x - 1] == "Rejected" || gtype[x - 1] == "Rural") return 0;
-            else return 1;
+            else return 0.3;
         }
-    return 1;
+    return 0.3;
 }
 
 function _Color(type) {
