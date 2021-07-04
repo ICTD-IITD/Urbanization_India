@@ -25,7 +25,7 @@ function initMap(flag) {
     if (flag == 1) initMap1(1);
     else if (flag == 2) initMap2(1);
     else if (flag == 3) initMap3(1);
-    else if (flag == 4) initMap4(1);
+    else if (flag == 4) initMap4(2);
     else if (flag == 5) initMap5(1);
 }
 
