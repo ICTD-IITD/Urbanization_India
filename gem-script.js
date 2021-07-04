@@ -31,147 +31,122 @@ function initMap(flag) {
 
 function initMap1(flag) {
     //OSM
-    map1 = new google.maps.Map(document.getElementById("map1"), op);
-    map2 = new google.maps.Map(document.getElementById("map2"), op);
-    map3 = new google.maps.Map(document.getElementById("map3"), op);
-    map4 = new google.maps.Map(document.getElementById("map4"), op);
-    map5 = new google.maps.Map(document.getElementById("map5"), op);
-    map6 = new google.maps.Map(document.getElementById("map6"), op);
-    map7 = new google.maps.Map(document.getElementById("map7"), op);
+    var mapset1 = [map1, map2, map3, map4, map5, map6, map7];
+    mapset1.forEach(element => {
+        if (element != undefined)
+            element.remove();
+    });
+
+    map1 = L.map('map1').setView(bangalore, 10);
+    map2 = L.map('map2').setView(chennai, 10);
+    map3 = L.map('map3').setView(delhi, 10);
+    map4 = L.map('map4').setView(gurgaon, 10);
+    map5 = L.map('map5').setView(hyderabad, 10);
+    map6 = L.map('map6').setView(kolkata, 10);
+    map7 = L.map('map7').setView(mumbai, 10);
+
+    var mapset2 = [map1, map2, map3, map4, map5, map6, map7];
+    mapset2.forEach(element => {
+        tile(element);
+    });
 
     catmap(flag);
-
-    divid("legend1", "map1");
-    divid("legend2", "map2");
-    divid("legend3", "map3");
-    divid("legend4", "map4");
-    divid("legend5", "map5");
-    divid("legend6", "map6");
-    divid("legend7", "map7");
-
-    makeLegend1("legend1", map1, flag);
-    makeLegend1("legend2", map2, flag);
-    makeLegend1("legend3", map3, flag);
-    makeLegend1("legend4", map4, flag);
-    makeLegend1("legend5", map5, flag);
-    makeLegend1("legend6", map6, flag);
-    makeLegend1("legend7", map7, flag);
 }
 
 function initMap2(flag) {
     //POPULATION
-    map8 = new google.maps.Map(document.getElementById("map8"), op);
-    map9 = new google.maps.Map(document.getElementById("map9"), op);
-    map10 = new google.maps.Map(document.getElementById("map10"), op);
-    map11 = new google.maps.Map(document.getElementById("map11"), op);
-    map12 = new google.maps.Map(document.getElementById("map12"), op);
-    map13 = new google.maps.Map(document.getElementById("map13"), op);
-    map14 = new google.maps.Map(document.getElementById("map14"), op);
+    var mapset1 = [map8, map9, map10, map11, map12, map13, map14];
+    mapset1.forEach(element => {
+        if (element != undefined)
+            element.remove();
+    });
+
+    map8 = L.map('map8').setView(bangalore, 10);
+    map9 = L.map('map9').setView(chennai, 10);
+    map10 = L.map('map10').setView(delhi, 10);
+    map11 = L.map('map11').setView(gurgaon, 10);
+    map12 = L.map('map12').setView(hyderabad, 10);
+    map13 = L.map('map13').setView(kolkata, 10);
+    map14 = L.map('map14').setView(mumbai, 10);
+
+    var mapset2 = [map8, map9, map10, map11, map12, map13, map14];
+    mapset2.forEach(element => {
+        tile(element);
+    });
 
     popmap(flag);
-
-    divid("legend1", "map8");
-    divid("legend2", "map9");
-    divid("legend3", "map10");
-    divid("legend4", "map11");
-    divid("legend5", "map12");
-    divid("legend6", "map13");
-    divid("legend7", "map14");
-
-    makeLegend2("legend1", map8, 1);
-    makeLegend2("legend2", map9, 2);
-    makeLegend2("legend3", map10, 3);
-    makeLegend2("legend4", map11, 4);
-    makeLegend2("legend5", map12, 5);
-    makeLegend2("legend6", map13, 6);
-    makeLegend2("legend7", map14, 7);
 }
 
 function initMap3(flag) {
     //NEAREST AMENITY
-    map15 = new google.maps.Map(document.getElementById("map15"), op);
-    map16 = new google.maps.Map(document.getElementById("map16"), op);
-    map17 = new google.maps.Map(document.getElementById("map17"), op);
-    map18 = new google.maps.Map(document.getElementById("map18"), op);
-    map19 = new google.maps.Map(document.getElementById("map19"), op);
-    map20 = new google.maps.Map(document.getElementById("map20"), op);
-    map21 = new google.maps.Map(document.getElementById("map21"), op);
+    var mapset1 = [map15, map16, map17, map18, map19, map20, map21];
+    mapset1.forEach(element => {
+        if (element != undefined)
+            element.remove();
+    });
+
+    map15 = L.map('map15').setView(bangalore, 10);
+    map16 = L.map('map16').setView(chennai, 10);
+    map17 = L.map('map17').setView(delhi, 10);
+    map18 = L.map('map18').setView(gurgaon, 10);
+    map19 = L.map('map19').setView(hyderabad, 10);
+    map20 = L.map('map20').setView(kolkata, 10);
+    map21 = L.map('map21').setView(mumbai, 10);
+
+    var mapset2 = [map15, map16, map17, map18, map19, map20, map21];
+    mapset2.forEach(element => {
+        tile(element);
+    });
 
     nmap(flag);
-
-    divid("legend1", "map15");
-    divid("legend2", "map16");
-    divid("legend3", "map17");
-    divid("legend4", "map18");
-    divid("legend5", "map19");
-    divid("legend6", "map20");
-    divid("legend7", "map21");
-
-    makeLegend3("legend1", map15, flag);
-    makeLegend3("legend2", map16, flag);
-    makeLegend3("legend3", map17, flag);
-    makeLegend3("legend4", map18, flag);
-    makeLegend3("legend5", map19, flag);
-    makeLegend3("legend6", map20, flag);
-    makeLegend3("legend7", map21, flag);
 }
 
 function initMap4(flag) {
     //NUM AMENITY
-    map22 = new google.maps.Map(document.getElementById("map22"), op);
-    map23 = new google.maps.Map(document.getElementById("map23"), op);
-    map24 = new google.maps.Map(document.getElementById("map24"), op);
-    map25 = new google.maps.Map(document.getElementById("map25"), op);
-    map26 = new google.maps.Map(document.getElementById("map26"), op);
-    map27 = new google.maps.Map(document.getElementById("map27"), op);
-    map28 = new google.maps.Map(document.getElementById("map28"), op);
+    var mapset1 = [map22, map23, map24, map25, map26, map27, map28];
+    mapset1.forEach(element => {
+        if (element != undefined)
+            element.remove();
+    });
+
+    map22 = L.map('map22').setView(bangalore, 10);
+    map23 = L.map('map23').setView(chennai, 10);
+    map24 = L.map('map24').setView(delhi, 10);
+    map25 = L.map('map25').setView(gurgaon, 10);
+    map26 = L.map('map26').setView(hyderabad, 10);
+    map27 = L.map('map27').setView(kolkata, 10);
+    map28 = L.map('map28').setView(mumbai, 10);
+
+    var mapset2 = [map22, map23, map24, map25, map26, map27, map28];
+    mapset2.forEach(element => {
+        tile(element);
+    });
 
     nummap(flag);
-
-    divid("legend1", "map22");
-    divid("legend2", "map23");
-    divid("legend3", "map24");
-    divid("legend4", "map25");
-    divid("legend5", "map26");
-    divid("legend6", "map27");
-    divid("legend7", "map28");
-
-    makeLegend4("legend1", map22, flag);
-    makeLegend4("legend2", map23, flag);
-    makeLegend4("legend3", map24, flag);
-    makeLegend4("legend4", map25, flag);
-    makeLegend4("legend5", map26, flag);
-    makeLegend4("legend6", map27, flag);
-    makeLegend4("legend7", map28, flag);
 }
 
 function initMap5(flag) {
     //POP LOAD
-    map29 = new google.maps.Map(document.getElementById("map29"), op);
-    map30 = new google.maps.Map(document.getElementById("map30"), op);
-    map31 = new google.maps.Map(document.getElementById("map31"), op);
-    map32 = new google.maps.Map(document.getElementById("map32"), op);
-    map33 = new google.maps.Map(document.getElementById("map33"), op);
-    map34 = new google.maps.Map(document.getElementById("map34"), op);
-    map35 = new google.maps.Map(document.getElementById("map35"), op);
+    var mapset1 = [map29, map30, map31, map32, map33, map34, map35];
+    mapset1.forEach(element => {
+        if (element != undefined)
+            element.remove();
+    });
+
+    map29 = L.map('map29').setView(bangalore, 10);
+    map30 = L.map('map30').setView(chennai, 10);
+    map31 = L.map('map31').setView(delhi, 10);
+    map32 = L.map('map32').setView(gurgaon, 10);
+    map33 = L.map('map33').setView(hyderabad, 10);
+    map34 = L.map('map34').setView(kolkata, 10);
+    map35 = L.map('map35').setView(mumbai, 10);
+
+    var mapset2 = [map29, map30, map31, map32, map33, map34, map35];
+    mapset2.forEach(element => {
+        tile(element);
+    });
 
     loadmap(flag);
-
-    divid("legend1", "map29");
-    divid("legend2", "map30");
-    divid("legend3", "map31");
-    divid("legend4", "map32");
-    divid("legend5", "map33");
-    divid("legend6", "map34");
-    divid("legend7", "map35");
-
-    makeLegend5("legend1", map29, flag);
-    makeLegend5("legend2", map30, flag);
-    makeLegend5("legend3", map31, flag);
-    makeLegend5("legend4", map32, flag);
-    makeLegend5("legend5", map33, flag);
-    makeLegend5("legend6", map34, flag);
-    makeLegend5("legend7", map35, flag);
 }
 
 function catmap(flag) {
@@ -183,6 +158,7 @@ function catmap(flag) {
     kol(1, flag, map6);
     mum(1, flag, map7);
 }
+
 
 function popmap(flag) {
     ban(2, flag, map8);
@@ -223,6 +199,29 @@ function loadmap(flag) {
     kol(4, flag, map34);
     mum(4, flag, map35);
 }
+
+function tile(mapx) {
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoiaGFyc2hpdGEyNjA1IiwiYSI6ImNrcW94a2YxOTBpZTYycnFoZnhrZHV2d2UifQ.vjNlkRwqbMgDjrKhBAHkDA'
+    }).addTo(mapx);
+
+    //POPUP
+    var popup = L.popup();
+
+    function onMapClick(e) {
+        popup
+            .setLatLng(e.latlng)
+            .setContent("Location Clicked: " + e.latlng.toString())
+            .openOn(mapx);
+    }
+    mapx.on('click', onMapClick);
+}
+
 
 function divid(legend, map) {
     const div = document.createElement("div");

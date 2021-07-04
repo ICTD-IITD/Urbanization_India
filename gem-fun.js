@@ -9,31 +9,20 @@ function setCoords(props, mapx) {
     var lat4 = props.properties.lat
     var lng4 = props.properties.lng + 0.01
 
-    const myGrid = new google.maps.Polygon({
-        paths: [{
-            lat: lat1,
-            lng: lng1
-        }, {
-            lat: lat2,
-            lng: lng2
-        }, {
-            lat: lat3,
-            lng: lng3
-        }, {
-            lat: lat4,
-            lng: lng4
-        }, ],
+    var polygonPoints = [
+        [lat1, lng1],
+        [lat2, lng2],
+        [lat3, lng3],
+        [lat4, lng4]
+    ];
 
-        strokeColor: "#808080",
-        strokeOpacity: 0.8,
-        strokeWeight: 1,
+    var poly = L.polygon(polygonPoints, {
+        color: '#808080',
+        weight: 2,
+        opacity: 0.8,
         fillColor: getColor(gridNumber),
-        fillOpacity: getOpacity(gridNumber),
-    });
-
-    myGrid.setMap(mapx);
-    myGrid.addListener("click", showArrays);
-    infoWindow = new google.maps.InfoWindow();
+        fillOpacity: getOpacity(gridNumber)
+    }).addTo(mapx);
 }
 
 function getColor(gridNumber) {
@@ -67,9 +56,9 @@ function getOpacity(gridNumber) {
         if (gridNumber >= index + gtype[x]) index += gtype[x];
         else {
             if (gtype[x - 1] == "Rejected" || gtype[x - 1] == "Rural") return 0;
-            else return 0.3;
+            else return 0.5;
         }
-    return 0.3;
+    return 0.5;
 }
 
 function _Color(type) {
@@ -87,16 +76,4 @@ function _Color(type) {
     else if (type == "10") return "FFFF99";
 
     else return "FFFFFF";
-}
-
-function showArrays(event) {
-    const polygon = this;
-    const vertices = polygon.getPath();
-    let contentString =
-        "Location: <br>" + event.latLng.lat() + ", " + event.latLng.lng() + "<br>" +
-        "Bottom Left Coordinate: " + vertices.getAt(3).lat().toFixed(2) + ", " + vertices.getAt(0).lng().toFixed(2);
-
-    infoWindow.setContent(contentString);
-    infoWindow.setPosition(event.latLng);
-    infoWindow.open(map);
 }

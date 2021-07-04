@@ -1,6 +1,6 @@
 function ban(indic, flag, mapx) {
-    mapx.setCenter(bangalore);
-    mapx.setZoom(9.25);
+    /* mapx.setCenter(bangalore);
+    mapx.setZoom(9.25); */
 
     if (indic == 1) {
         switch (flag) {
@@ -111,8 +111,8 @@ function ban(indic, flag, mapx) {
 }
 
 function che(indic, flag, mapx) {
-    mapx.setCenter(chennai);
-    mapx.setZoom(10.75);
+    /* mapx.setCenter(chennai);
+    mapx.setZoom(10.75); */
 
     if (indic == 1) {
         switch (flag) {
@@ -223,8 +223,8 @@ function che(indic, flag, mapx) {
 }
 
 function del(indic, flag, mapx) {
-    mapx.setCenter(delhi);
-    mapx.setZoom(9.25);
+    /* mapx.setCenter(delhi);
+    mapx.setZoom(9.25); */
 
     if (indic == 1) {
         switch (flag) {
@@ -335,8 +335,8 @@ function del(indic, flag, mapx) {
 }
 
 function gur(indic, flag, mapx) {
-    mapx.setCenter(gurgaon);
-    mapx.setZoom(9.25);
+    /* mapx.setCenter(gurgaon);
+    mapx.setZoom(9.25); */
 
     if (indic == 1) {
         switch (flag) {
@@ -446,8 +446,8 @@ function gur(indic, flag, mapx) {
 }
 
 function hyd(indic, flag, mapx) {
-    mapx.setCenter(hyderabad);
-    mapx.setZoom(10.75);
+    /* mapx.setCenter(hyderabad);
+    mapx.setZoom(10.75); */
 
     if (indic == 1) {
         switch (flag) {
@@ -558,8 +558,8 @@ function hyd(indic, flag, mapx) {
 }
 
 function kol(indic, flag, mapx) {
-    mapx.setCenter(kolkata);
-    mapx.setZoom(10.75);
+    /* mapx.setCenter(kolkata);
+    mapx.setZoom(10.75); */
 
     if (indic == 1) {
         switch (flag) {
@@ -669,8 +669,8 @@ function kol(indic, flag, mapx) {
 }
 
 function mum(indic, flag, mapx) {
-    mapx.setCenter(mumbai);
-    mapx.setZoom(9.75);
+    /* mapx.setCenter(mumbai);
+    mapx.setZoom(9.75); */
 
     if (indic == 1) {
         switch (flag) {
