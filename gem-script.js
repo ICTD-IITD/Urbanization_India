@@ -37,17 +37,18 @@ function initMap1(flag) {
             element.remove();
     });
 
-    map1 = L.map('map1').setView(bangalore, 10);
-    map2 = L.map('map2').setView(chennai, 10);
-    map3 = L.map('map3').setView(delhi, 10);
-    map4 = L.map('map4').setView(gurgaon, 10);
-    map5 = L.map('map5').setView(hyderabad, 10);
-    map6 = L.map('map6').setView(kolkata, 10);
-    map7 = L.map('map7').setView(mumbai, 10);
+    map1 = L.map('map1').setView(bangalore, 9.25);
+    map2 = L.map('map2').setView(chennai, 10.75);
+    map3 = L.map('map3').setView(delhi, 9.25);
+    map4 = L.map('map4').setView(gurgaon, 9.25);
+    map5 = L.map('map5').setView(hyderabad, 10.75);
+    map6 = L.map('map6').setView(kolkata, 10.75);
+    map7 = L.map('map7').setView(mumbai, 9.75);
 
     var mapset2 = [map1, map2, map3, map4, map5, map6, map7];
     mapset2.forEach(element => {
         tile(element);
+        makeLegend1(element, flag);
     });
 
     catmap(flag);
@@ -61,17 +62,18 @@ function initMap2(flag) {
             element.remove();
     });
 
-    map8 = L.map('map8').setView(bangalore, 10);
-    map9 = L.map('map9').setView(chennai, 10);
-    map10 = L.map('map10').setView(delhi, 10);
-    map11 = L.map('map11').setView(gurgaon, 10);
-    map12 = L.map('map12').setView(hyderabad, 10);
-    map13 = L.map('map13').setView(kolkata, 10);
-    map14 = L.map('map14').setView(mumbai, 10);
+    map8 = L.map('map8').setView(bangalore, 9.25);
+    map9 = L.map('map9').setView(chennai, 10.75);
+    map10 = L.map('map10').setView(delhi, 9.25);
+    map11 = L.map('map11').setView(gurgaon, 9.25);
+    map12 = L.map('map12').setView(hyderabad, 10.75);
+    map13 = L.map('map13').setView(kolkata, 10.75);
+    map14 = L.map('map14').setView(mumbai, 9.75);
 
     var mapset2 = [map8, map9, map10, map11, map12, map13, map14];
     mapset2.forEach(element => {
         tile(element);
+        makeLegend2(element, flag);
     });
 
     popmap(flag);
@@ -85,17 +87,18 @@ function initMap3(flag) {
             element.remove();
     });
 
-    map15 = L.map('map15').setView(bangalore, 10);
-    map16 = L.map('map16').setView(chennai, 10);
-    map17 = L.map('map17').setView(delhi, 10);
-    map18 = L.map('map18').setView(gurgaon, 10);
-    map19 = L.map('map19').setView(hyderabad, 10);
-    map20 = L.map('map20').setView(kolkata, 10);
-    map21 = L.map('map21').setView(mumbai, 10);
+    map15 = L.map('map15').setView(bangalore, 9.25);
+    map16 = L.map('map16').setView(chennai, 10.75);
+    map17 = L.map('map17').setView(delhi, 9.25);
+    map18 = L.map('map18').setView(gurgaon, 9.25);
+    map19 = L.map('map19').setView(hyderabad, 10.75);
+    map20 = L.map('map20').setView(kolkata, 10.75);
+    map21 = L.map('map21').setView(mumbai, 9.75);
 
     var mapset2 = [map15, map16, map17, map18, map19, map20, map21];
     mapset2.forEach(element => {
         tile(element);
+        makeLegend3(element, flag);
     });
 
     nmap(flag);
@@ -109,17 +112,18 @@ function initMap4(flag) {
             element.remove();
     });
 
-    map22 = L.map('map22').setView(bangalore, 10);
-    map23 = L.map('map23').setView(chennai, 10);
-    map24 = L.map('map24').setView(delhi, 10);
-    map25 = L.map('map25').setView(gurgaon, 10);
-    map26 = L.map('map26').setView(hyderabad, 10);
-    map27 = L.map('map27').setView(kolkata, 10);
-    map28 = L.map('map28').setView(mumbai, 10);
+    map22 = L.map('map22').setView(bangalore, 9.25);
+    map23 = L.map('map23').setView(chennai, 10.75);
+    map24 = L.map('map24').setView(delhi, 9.25);
+    map25 = L.map('map25').setView(gurgaon, 9.25);
+    map26 = L.map('map26').setView(hyderabad, 10.75);
+    map27 = L.map('map27').setView(kolkata, 10.75);
+    map28 = L.map('map28').setView(mumbai, 9.75);
 
     var mapset2 = [map22, map23, map24, map25, map26, map27, map28];
     mapset2.forEach(element => {
         tile(element);
+        makeLegend4(element, flag);
     });
 
     nummap(flag);
@@ -133,17 +137,18 @@ function initMap5(flag) {
             element.remove();
     });
 
-    map29 = L.map('map29').setView(bangalore, 10);
-    map30 = L.map('map30').setView(chennai, 10);
-    map31 = L.map('map31').setView(delhi, 10);
-    map32 = L.map('map32').setView(gurgaon, 10);
-    map33 = L.map('map33').setView(hyderabad, 10);
-    map34 = L.map('map34').setView(kolkata, 10);
-    map35 = L.map('map35').setView(mumbai, 10);
+    map29 = L.map('map29').setView(bangalore, 9.25);
+    map30 = L.map('map30').setView(chennai, 10.75);
+    map31 = L.map('map31').setView(delhi, 9.25);
+    map32 = L.map('map32').setView(gurgaon, 9.25);
+    map33 = L.map('map33').setView(hyderabad, 10.75);
+    map34 = L.map('map34').setView(kolkata, 10.75);
+    map35 = L.map('map35').setView(mumbai, 9.75);
 
     var mapset2 = [map29, map30, map31, map32, map33, map34, map35];
     mapset2.forEach(element => {
         tile(element);
+        makeLegend5(element, flag);
     });
 
     loadmap(flag);
@@ -220,12 +225,4 @@ function tile(mapx) {
             .openOn(mapx);
     }
     mapx.on('click', onMapClick);
-}
-
-
-function divid(legend, map) {
-    const div = document.createElement("div");
-    div.setAttribute("class", "legend");
-    div.setAttribute("id", legend);
-    document.getElementById(map).appendChild(div);
 }
