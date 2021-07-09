@@ -6,6 +6,14 @@ body {
     padding: 0;
 }
 
+.sidebar {
+    will-change: transform;
+}
+
+#mapid {
+    height: 700px;
+}
+
 a {
     color: inherit;
     /* blue colors for links too */
