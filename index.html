@@ -2,13 +2,10 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
-
     <script src="js/all.js"></script>
     <script src="js/n2.js"></script>
     <script src="js/num2.js"></script>
@@ -86,146 +83,121 @@
                     </div>
                 </div>
 
-          <div class="col border-right border-dark">
-            <h2>WorldPop Based Indicators</h2>
-            <div>
-              WorldPop includes the rasterized data of the population of
-              different countries. Among various formats of the dataset
-              available at Worldpop, we used their “top-down constrained” model.
-              The top-down approach takes a global database of the
-              administrative unit- based census to project counts for year 2020.
-              Further, in the top-down constrained model, the population is
-              disaggregated to only those grid cells identified as containing
-              buildings/built settlements. The dataset used contains population
-              count for 100m x 100m pixel granularity. We converted the
-              rasterised WorldPop data into a 2D numpy array representing
-              population in each pixel. One grid contained many of the world pop
-              pixels. Various Population Based Indicators extracted from this
-              data are:- a) Grid Population:: For each urbanised grid, we found
-              out the array slicing offsets and then took a sum of the
-              population in that sliced array to find the population of that
-              grid. b) Population load on amenity sites:: Taking every amenity
-              site (of a particular category) within district boundary we
-              generated their Voroni diagram. The polygon formed for each site
-              was called its catchment area. Then for each amenity site with a
-              bounded catchment area that lied within the bounding box of
-              district, we found out the population in that catchment area and
-              called that as population load on that amenity site assuming that
-              the amenity site serves all people within its catchment area.
-            </div>
-          </div>
-          <div class="col"> 
-            <h2>Google Places Based Indicators</h2>
-            <div>
-              Using the Google Places API, one can search for place information
-              using various categories, including establishments, prominent
-              points of interest, and geographic locations. We used their “Place
-              Search” API that returns a list of places and summary information
-              about each site, including their geographical coordinates. We use
-              these coordinates, after some pre-processing, in our further
-              analysis. We generate HTTP Request on places API which takes type
-              of category, centre and radius as input and returns the data of
-              that type of amenities present in the circular region including
-              their latitude and longitude in form of json file.
-            </div>
-          </div>
-            <hr style="
+                <div class="col border-right border-dark">
+                    <h2>WorldPop Based Indicators</h2>
+                    <div>
+                        WorldPop includes the rasterized data of the population of different countries. Among various formats of the dataset available at Worldpop, we used their “top-down constrained” model. The top-down approach takes a global database of the administrative
+                        unit- based census to project counts for year 2020. Further, in the top-down constrained model, the population is disaggregated to only those grid cells identified as containing buildings/built settlements. The dataset used contains
+                        population count for 100m x 100m pixel granularity. We converted the rasterised WorldPop data into a 2D numpy array representing population in each pixel. One grid contained many of the world pop pixels. Various Population Based
+                        Indicators extracted from this data are:- a) Grid Population:: For each urbanised grid, we found out the array slicing offsets and then took a sum of the population in that sliced array to find the population of that grid. b) Population
+                        load on amenity sites:: Taking every amenity site (of a particular category) within district boundary we generated their Voroni diagram. The polygon formed for each site was called its catchment area. Then for each amenity site
+                        with a bounded catchment area that lied within the bounding box of district, we found out the population in that catchment area and called that as population load on that amenity site assuming that the amenity site serves all people
+                        within its catchment area.
+                    </div>
+                </div>
+                <div class="col">
+                    <h2>Google Places Based Indicators</h2>
+                    <div>
+                        Using the Google Places API, one can search for place information using various categories, including establishments, prominent points of interest, and geographic locations. We used their “Place Search” API that returns a list of places and summary information
+                        about each site, including their geographical coordinates. We use these coordinates, after some pre-processing, in our further analysis. We generate HTTP Request on places API which takes type of category, centre and radius as
+                        input and returns the data of that type of amenities present in the circular region including their latitude and longitude in form of json file.
+                    </div>
+                </div>
+                <hr style="
             height: 2px;
             border-width: 0;
             color: gray;
             background-color: gray;
           " />
-            <div class="row">
-                <div class="col">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Categories</th>
-                                <th scope="col">Places amenities in each Category</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">Education</th>
-                                <td>School, Primary School</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Health</th>
-                                <td>Hospital, Doctor</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Connectivity</th>
-                                <td>Taxi Stand, Bus Station, Train Station</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Utilities</th>
-                                <td>Grocery store or supermarket, department store</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Govt. Facilities</th>
-                                <td>Bank, Police, Local Govt. Office</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="row">
+                    <div class="col">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Categories</th>
+                                    <th scope="col">Places amenities in each Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Education</th>
+                                    <td>School, Primary School</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Health</th>
+                                    <td>Hospital, Doctor</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Connectivity</th>
+                                    <td>Taxi Stand, Bus Station, Train Station</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Utilities</th>
+                                    <td>Grocery store or supermarket, department store</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Govt. Facilities</th>
+                                    <td>Bank, Police, Local Govt. Office</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col">
+                        We process the json files obtained from Google Places to store the lat-lon of amenity sites into a pkl file. <br />a) Accessibility:: For each urbanised grid we use Breadth First Search (BFS to explore nearby grids) to search for
+                        nearest amenity distance for a particular amenity category eg- nearest educational amenity distance, nearest health facility distance etc. The Euclidean distance formula is used and the distance to amenity site is calculated from
+                        the centre of the grid. <br />b) Accessibility:: For each urbanised grid we use Breadth First Search (BFS to explore nearby grids) to search for number of amenity sites within standard range of distance for a particular amenity
+                        category eg- number of educational amenity sites within standard range, number of health facility sites within standard range etc. The Euclidean distance formula is used and the distance to amenity site is calculated from the centre
+                        of the grid. Based on the Urban and Regional De- velopment Plans Formulation and Implementation (URDPFI) [5] guidelines, we defined a standard range for each type of amenity which signifies within what distance that particular
+                        amenity should be present:-
+                    </div>
+                    <div class="col">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Categories</th>
+                                    <th scope="col">Standard Range in metres</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Education</th>
+                                    <td>2000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Health</th>
+                                    <td>2000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Connectivity</th>
+                                    <td>400-800</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Utilities</th>
+                                    <td>800</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Govt. Facilities</th>
+                                    <td>2000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="col">
-                    We process the json files obtained from Google Places to store the lat-lon of amenity sites into a pkl file. <br />a) Accessibility:: For each urbanised grid we use Breadth First Search (BFS to explore nearby grids) to search for nearest
-                    amenity distance for a particular amenity category eg- nearest educational amenity distance, nearest health facility distance etc. The Euclidean distance formula is used and the distance to amenity site is calculated from the centre
-                    of the grid. <br />b) Accessibility:: For each urbanised grid we use Breadth First Search (BFS to explore nearby grids) to search for number of amenity sites within standard range of distance for a particular amenity category eg- number
-                    of educational amenity sites within standard range, number of health facility sites within standard range etc. The Euclidean distance formula is used and the distance to amenity site is calculated from the centre of the grid. Based
-                    on the Urban and Regional De- velopment Plans Formulation and Implementation (URDPFI) [5] guidelines, we defined a standard range for each type of amenity which signifies within what distance that particular amenity should be present:-
+                <div class="row">
+                    <div class="col" style="text-align: center">
+                        <img src="./images/Methodology.png" class="method-img" />
+                    </div>
                 </div>
-                <div class="col">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Categories</th>
-                                <th scope="col">Standard Range in metres</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">Education</th>
-                                <td>2000</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Health</th>
-                                <td>2000</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Connectivity</th>
-                                <td>400-800</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Utilities</th>
-                                <td>800</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Govt. Facilities</th>
-                                <td>2000</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col" style="text-align: center">
-                    <img src="./images/Methodology.png" class="method-img" />
-                </div>
-            </div>
-        
-    </div>
 
-    <div class="content">
-      <div id="urban-grids" class="category-sections">
-        <h1 class="section-header">Categorising Urban Areas</h1>
-        <div class="row section-container">
-          <div class="col section-description">
-            You can refer our research paper here : <br />
-            <a
-              style="color: blue"
-              href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf"
-              >Leveraging Web Data to Monitor Changes in Corporate-Government
+            </div>
+
+            <div class="content">
+                <div id="urban-grids" class="category-sections">
+                    <h1 class="section-header">Categorising Urban Areas</h1>
+                    <div class="row section-container">
+                        <div class="col section-description">
+                            You can refer our research paper here : <br />
+                            <a style="color: blue" href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf">Leveraging Web Data to Monitor Changes in Corporate-Government
               Interlocks in India -</a
             >
 
@@ -1302,7 +1274,6 @@
       </div>
     </div>
 
-    <!-- Javascript -->
     <script src="gem-script.js"></script>
     <script src="gem-cities.js"></script>
     <script src="gem-fun.js"></script>

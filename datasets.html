@@ -1,72 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+
+<head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link href="new_style.css" rel="stylesheet" />
 
     <title>Urbanization</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container navbar-inner">
-        <p class="navbar-title">
-          <a class="nav-link" href="">Methodology</a>
-        </p>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#topNavbar"
-          aria-controls="topNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <div class="container navbar-inner">
+            <p class="navbar-title">
+                <a class="nav-link" href="">Methodology</a>
+            </p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div
-          class="navbar-collapse collapse w-100 order-3 dual-collapse2"
-          id="topNavbar"
-        >
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="./new_index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./datasets.html">Methodology</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="topNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./new_index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./datasets.html">Methodology</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Categories
               </a>
-              <div
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <a class="dropdown-item" href="./urban.html"
-                  >Categorising Urban Areas</a
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="./urban.html">Categorising Urban Areas</a
                 >
                 <a class="dropdown-item" href="./distribution.html"
                   >Population Distribution in Districts</a
@@ -102,186 +70,137 @@
             <a href="https://www.openstreetmap.org" target="_blank"
               ><img src="./images/assets/osm.png" class="dataset-img"
             /></a>
-          </div>
+                        </div>
+            </div>
+            <div class="col-12 col-md-7">
+                <div class="container-heading">OSM based Indicators</div>
+                <div class="container-content">
+                    Each district’s bounding box is divided into grids of 0.01 latitudinal and 0.01 longitudinal widths. Each grid has area roughly 1 Km square, which is one-third of the average size of a village in India. Sentinel-2 images of a district is passed through
+                    a pipeline containing land-use classifier to finally produce 30m resolution pixels classified as urban, peri-urban and rural. A grid is selected for further analysis of its road network only if more than 50% of its pixels are either
+                    urban or peri-urban because amount of built-up pixels in a districts’s satellite image is an indicator of human development activities (like the construction of residential buildings, commercial structures, roads, etc.) in the district.
+                    The road network data (downloaded from OSM) is used to calculate indicators like number of 3 ways, number of 4 ways, road length, walkability ratio etc for each urbanised grid.
+                </div>
+            </div>
         </div>
-        <div class="col-12 col-md-7">
-          <div class="container-heading">OSM based Indicators</div>
-          <div class="container-content">
-            Each district’s bounding box is divided into grids of 0.01
-            latitudinal and 0.01 longitudinal widths. Each grid has area roughly
-            1 Km square, which is one-third of the average size of a village in
-            India. Sentinel-2 images of a district is passed through a pipeline
-            containing land-use classifier to finally produce 30m resolution
-            pixels classified as urban, peri-urban and rural. A grid is selected
-            for further analysis of its road network only if more than 50% of
-            its pixels are either urban or peri-urban because amount of built-up
-            pixels in a districts’s satellite image is an indicator of human
-            development activities (like the construction of residential
-            buildings, commercial structures, roads, etc.) in the district. The
-            road network data (downloaded from OSM) is used to calculate
-            indicators like number of 3 ways, number of 4 ways, road length,
-            walkability ratio etc for each urbanised grid.
-          </div>
+        <div class="row dataset-container">
+            <div class="col-12 col-md-5">
+                <div class="dataset-img-container">
+                    <a href="https://www.worldpop.org/" target="_blank"><img src="./images/assets/worldpop.png" class="dataset-img" /></a>
+                </div>
+            </div>
+            <div class="col-12 col-md-7">
+                <div class="container-heading">WorldPop based Indicators</div>
+                <div class="container-content">
+                    WorldPop includes the rasterized data of the population of different countries. Among various formats of the dataset available at Worldpop, we used their “top-down constrained” model. The top-down approach takes a global database of the administrative
+                    unit- based census to project counts for year 2020. Further, in the top-down constrained model, the population is disaggregated to only those grid cells identified as containing buildings/built settlements. The dataset used contains
+                    population count for 100m x 100m pixel granularity. We converted the rasterised WorldPop data into a 2D numpy array representing population in each pixel. One grid contained many of the world pop pixels. Various Population Based Indicators
+                    extracted from this data are:- a) Grid Population:: For each urbanised grid, we found out the array slicing offsets and then took a sum of the population in that sliced array to find the population of that grid. b) Population load
+                    on amenity sites:: Taking every amenity site (of a particular category) within district boundary we generated their Voroni diagram. The polygon formed for each site was called its catchment area. Then for each amenity site with a bounded
+                    catchment area that lied within the bounding box of district, we found out the population in that catchment area and called that as population load on that amenity site assuming that the amenity site serves all people within its catchment
+                    area.
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="row dataset-container">
-        <div class="col-12 col-md-5">
-          <div class="dataset-img-container">
-            <a href="https://www.worldpop.org/" target="_blank"
-              ><img src="./images/assets/worldpop.png" class="dataset-img"
-            /></a>
-          </div>
+        <div class="row dataset-container">
+            <div class="col-12 col-md-5">
+                <div class="dataset-img-container">
+                    <a href="https://cloud.google.com/maps-platform/places" target="_blank"><img src="./images/assets/google-places.png" class="dataset-img" /></a>
+                </div>
+            </div>
+            <div class="col-12 col-md-7">
+                <div class="container-heading">Google Places based Indicators</div>
+                <div class="container-content">
+                    Using the Google Places API, one can search for place information using various categories, including establishments, prominent points of interest, and geographic locations. We used their “Place Search” API that returns a list of places and summary information
+                    about each site, including their geographical coordinates. We use these coordinates, after some pre-processing, in our further analysis. We generate HTTP Request on places API which takes type of category, centre and radius as input
+                    and returns the data of that type of amenities present in the circular region including their latitude and longitude in form of json file.
+                </div>
+            </div>
         </div>
-        <div class="col-12 col-md-7">
-          <div class="container-heading">WorldPop based Indicators</div>
-          <div class="container-content">
-            WorldPop includes the rasterized data of the population of different
-            countries. Among various formats of the dataset available at
-            Worldpop, we used their “top-down constrained” model. The top-down
-            approach takes a global database of the administrative unit- based
-            census to project counts for year 2020. Further, in the top-down
-            constrained model, the population is disaggregated to only those
-            grid cells identified as containing buildings/built settlements. The
-            dataset used contains population count for 100m x 100m pixel
-            granularity. We converted the rasterised WorldPop data into a 2D
-            numpy array representing population in each pixel. One grid
-            contained many of the world pop pixels. Various Population Based
-            Indicators extracted from this data are:- a) Grid Population:: For
-            each urbanised grid, we found out the array slicing offsets and then
-            took a sum of the population in that sliced array to find the
-            population of that grid. b) Population load on amenity sites::
-            Taking every amenity site (of a particular category) within district
-            boundary we generated their Voroni diagram. The polygon formed for
-            each site was called its catchment area. Then for each amenity site
-            with a bounded catchment area that lied within the bounding box of
-            district, we found out the population in that catchment area and
-            called that as population load on that amenity site assuming that
-            the amenity site serves all people within its catchment area.
-          </div>
-        </div>
-      </div>
-      <div class="row dataset-container">
-        <div class="col-12 col-md-5">
-          <div class="dataset-img-container">
-            <a
-              href="https://cloud.google.com/maps-platform/places"
-              target="_blank"
-              ><img src="./images/assets/google-places.png" class="dataset-img"
-            /></a>
-          </div>
-        </div>
-        <div class="col-12 col-md-7">
-          <div class="container-heading">Google Places based Indicators</div>
-          <div class="container-content">
-            Using the Google Places API, one can search for place information
-            using various categories, including establishments, prominent points
-            of interest, and geographic locations. We used their “Place Search”
-            API that returns a list of places and summary information about each
-            site, including their geographical coordinates. We use these
-            coordinates, after some pre-processing, in our further analysis. We
-            generate HTTP Request on places API which takes type of category,
-            centre and radius as input and returns the data of that type of
-            amenities present in the circular region including their latitude
-            and longitude in form of json file.
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Categories</th>
-                <th scope="col">Places amenities in each Category</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Education</th>
-                <td>School, Primary School</td>
-              </tr>
-              <tr>
-                <th scope="row">Health</th>
-                <td>Hospital, Doctor</td>
-              </tr>
-              <tr>
-                <th scope="row">Connectivity</th>
-                <td>Taxi Stand, Bus Station, Train Station</td>
-              </tr>
-              <tr>
-                <th scope="row">Utilities</th>
-                <td>Grocery store or supermarket, department store</td>
-              </tr>
-              <tr>
-                <th scope="row">Govt. Facilities</th>
-                <td>Bank, Police, Local Govt. Office</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-12 col-md-6">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Categories</th>
-                <th scope="col">Standard Range in metres</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Education</th>
-                <td>2000</td>
-              </tr>
-              <tr>
-                <th scope="row">Health</th>
-                <td>2000</td>
-              </tr>
-              <tr>
-                <th scope="row">Connectivity</th>
-                <td>400-800</td>
-              </tr>
-              <tr>
-                <th scope="row">Utilities</th>
-                <td>800</td>
-              </tr>
-              <tr>
-                <th scope="row">Govt. Facilities</th>
-                <td>2000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="row" style="margin: 20px 0">
-        <div class="overall-image-container">
-          <div class="container-heading" style="text-align: center">
-            Overall Picture
-          </div>
-          <img
-            src="./images/Methodology.png"
-            style="border: 1px solid #dfdfdf; padding: 10px; width: 100%"
-          />
-        </div>
-      </div>
-
-      <div class="paper-reference">
         <div class="row">
-          <div class="col-12 col-md-3 paper-image-container">
-            <a
-              target="_blank"
-              href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf"
-              ><img src="./images/assets/paper.png" class="research-paper-img"
-            /></a>
-          </div>
-          <div class="col-12 col-md-8">
-            To know more, refer to our research paper here : <br />
-            <a
-              target="_blank"
-              style="text-decoration: underline"
-              href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf"
-              >Characterizing The Evolution Of Indian Cities Using Satellite
+            <div class="col-12 col-md-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Categories</th>
+                            <th scope="col">Places amenities in each Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Education</th>
+                            <td>School, Primary School</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Health</th>
+                            <td>Hospital, Doctor</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Connectivity</th>
+                            <td>Taxi Stand, Bus Station, Train Station</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Utilities</th>
+                            <td>Grocery store or supermarket, department store</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Govt. Facilities</th>
+                            <td>Bank, Police, Local Govt. Office</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12 col-md-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Categories</th>
+                            <th scope="col">Standard Range in metres</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Education</th>
+                            <td>2000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Health</th>
+                            <td>2000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Connectivity</th>
+                            <td>400-800</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Utilities</th>
+                            <td>800</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Govt. Facilities</th>
+                            <td>2000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row" style="margin: 20px 0">
+            <div class="overall-image-container">
+                <div class="container-heading" style="text-align: center">
+                    Overall Picture
+                </div>
+                <img src="./images/Methodology.png" style="border: 1px solid #dfdfdf; padding: 10px; width: 100%" />
+            </div>
+        </div>
+
+        <div class="paper-reference">
+            <div class="row">
+                <div class="col-12 col-md-3 paper-image-container">
+                    <a target="_blank" href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf"><img src="./images/assets/paper.png" class="research-paper-img" /></a>
+                </div>
+                <div class="col-12 col-md-8">
+                    To know more, refer to our research paper here : <br />
+                    <a target="_blank" style="text-decoration: underline" href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf">Characterizing The Evolution Of Indian Cities Using Satellite
               Imagery And Open Street Maps</a
             >
 
@@ -297,8 +216,6 @@
       </div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

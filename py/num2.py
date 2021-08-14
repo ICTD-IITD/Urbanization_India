@@ -16,9 +16,7 @@ def write(fin, fac):
 
     for r in range (1, np.size(arr, 0)):
         for c in range (0, np.size(arr, 1)):
-            x = math.floor(arr[r][c]/fac)
-            if x > 9:
-                x = 10
+            x = math.floor(arr[r][c]*fac)
             if c == 0:
                 f.write("\nvar "  + str(df.columns[r]) + " = [")
                 t = 0
@@ -38,10 +36,10 @@ def write(fin, fac):
         f.write(", " + str(t) + "]")
     f.write("\n" + str(count))
 
-for file in sorted(glob('data/conn/num/*.csv')): write(file, 1)
-for file in sorted(glob('data/edu/num/*.csv')): write(file, 1)
-for file in sorted(glob('data/govt/num/*.csv')): write(file, 1)
-for file in sorted(glob('data/health/num/*.csv')): write(file, 1)
-for file in sorted(glob('data/utility/num/*.csv')): write(file, 1)
+for file in sorted(glob('data/conn/num/*.csv')): write(file, 10)
+for file in sorted(glob('data/edu/num/*.csv')): write(file, 10)
+for file in sorted(glob('data/govt/num/*.csv')): write(file, 10)
+for file in sorted(glob('data/health/num/*.csv')): write(file, 10)
+for file in sorted(glob('data/utility/num/*.csv')): write(file, 10)
 
 f.close()

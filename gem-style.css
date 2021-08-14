@@ -1,150 +1,150 @@
 html,
 body {
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
 }
 
 a {
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
+    color: inherit;
+    text-decoration: inherit;
 }
+
 a:hover {
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
+    color: inherit;
+    text-decoration: inherit;
 }
 
 .main-intro-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-  width: 100%;
-  padding: 10% 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    padding: 10% 15%;
 }
 
 .main-links {
-  display: flex;
-  margin: 20px 0 0 0;
-  overflow: hidden;
+    display: flex;
+    margin: 20px 0 0 0;
+    overflow: hidden;
 }
 
 .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 0 10%;
-  background-color: white;
-  margin: 0;
-  z-index: 10;
-  border-bottom: 1px solid black;
-  margin-bottom: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 10%;
+    background-color: white;
+    margin: 0;
+    z-index: 10;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
 }
 
 .main-link-item {
-  margin: 0 10px;
-  padding: 5px;
-  cursor: pointer;
+    margin: 0 10px;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .main-link-item:hover {
-  background-color: white;
-  color: green;
+    background-color: white;
+    color: green;
 }
 
 .method-img {
-  margin-top: 50px;
-  padding: 10px;
-  border: 1px solid black;
+    margin-top: 50px;
+    padding: 10px;
+    border: 1px solid black;
 }
 
 .category-sections {
-  min-height: 100vh;
-  padding: 25px;
-  padding-top: 80px;
+    min-height: 100vh;
+    padding: 25px;
+    padding-top: 80px;
 }
 
 .section-container {
-  height: 50%;
-  margin: 20px 0;
+    height: 50%;
+    margin: 20px 0;
 }
 
 .section-large-map {
-  display: flex;
-  margin-left: 20px;
-  justify-content: center;
+    display: flex;
+    margin-left: 20px;
+    justify-content: center;
 }
 
 .section-description {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .map-radio-btns {
-  margin-left: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .section-small-maps {
-  margin: 20px 0 0 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .small-maps-label {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .section-2-col {
-  height: 700px;
-  border: 1px solid black;
+    height: 700px;
+    border: 1px solid black;
 }
 
 .section-heading-ques {
-  font-size: 20px;
-  font-style: italic;
+    font-size: 20px;
+    font-style: italic;
 }
 
 .section-inferences {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .section-image {
-  width: 500px;
-  border: 1px solid black;
-  object-fit: cover;
+    width: 500px;
+    border: 1px solid black;
+    object-fit: cover;
 }
 
 .section-2-image {
-  margin: 3px;
-  width: 270px;
-  border: 1px solid black;
+    margin: 3px;
+    width: 270px;
+    border: 1px solid black;
 }
 
 .growable {
-  transition: transform 0.25s ease;
+    transition: transform 0.25s ease;
 }
 
 .growable:hover {
-  -webkit-transform: scale(2);
-  /* or some other value */
-  transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
 }
 
 .section-2-maps {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .section-3-img {
-  width: 250px;
-  margin-top: 5px;
-  border: 1px solid black;
+    width: 250px;
+    margin-top: 5px;
+    border: 1px solid black;
 }

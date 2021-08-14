@@ -32,7 +32,20 @@ function setCoords(props, mapx) {
     });
 
     myGrid.setMap(mapx);
-    myGrid.addListener("click", showArrays);
+
+    myGrid.addListener("click", () => {
+        //document.getElementById("demo").innerHTML = "ok";
+        const polygon = this;
+        const vertices = polygon.getPath();
+        let contentString =
+            "Location: <br>" + latLng.lat() + ", " + latLng.lng() + "<br>" +
+            "Bottom Left Coordinate: " + vertices.getAt(3).lat().toFixed(2) + ", " + vertices.getAt(0).lng().toFixed(2);
+
+        infoWindow.setContent(contentString);
+        infoWindow.setPosition(latLng);
+        infoWindow.open(mapx);
+    });
+
     infoWindow = new google.maps.InfoWindow();
 }
 
@@ -90,6 +103,7 @@ function _Color(type) {
 }
 
 function showArrays(event) {
+    document.getElementById("demo").innerHTML = "ok";
     const polygon = this;
     const vertices = polygon.getPath();
     let contentString =
@@ -98,5 +112,5 @@ function showArrays(event) {
 
     infoWindow.setContent(contentString);
     infoWindow.setPosition(event.latLng);
-    infoWindow.open(map);
+    infoWindow.open(mapx);
 }

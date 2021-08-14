@@ -8,9 +8,7 @@ body {
 
 a {
     color: inherit;
-    /* blue colors for links too */
     text-decoration: inherit;
-    /* no underline */
 }
 
 .navbar-title {
@@ -97,9 +95,7 @@ a {
 
 .container-content::-webkit-scrollbar {
     width: 0;
-    /* Remove scrollbar space */
     background: transparent;
-    /* Optional: just make scrollbar invisible */
 }
 
 .table {

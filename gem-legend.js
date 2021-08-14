@@ -150,7 +150,7 @@ function makeLegend4(legendid, map, flag) {
 
     const div = document.createElement("div");
     div.innerHTML =
-        '<div style="background-color:#FFFF99">' + '0 - ' + fac + '</div>' +
+        /* '<div style="background-color:#FFFF99">' + '0 - ' + fac + '</div>' +
         '<div style="background-color:#FDE725">' + fac + ' - ' + fac * 2 + '</div>' +
         '<div style="background-color:#95D840">' + fac * 2 + ' - ' + fac * 3 + '</div>' +
         '<div style="background-color:#3CBB75">' + fac * 3 + ' - ' + fac * 4 + '</div>' +
@@ -160,7 +160,19 @@ function makeLegend4(legendid, map, flag) {
         '<div style="color:#FFFFFF;background-color:#39569C">' + fac * 7 + ' - ' + fac * 8 + '</div>' +
         '<div style="color:#FFFFFF;background-color:#453781">' + fac * 8 + ' - ' + fac * 9 + '</div>' +
         '<div style="color:#FFFFFF;background-color:#481567">' + fac * 9 + ' - ' + fac * 10 + '</div>' +
-        '<div style="color:#FFFFFF;background-color:#444444">' + '> ' + fac * 10 + '</div>';
+        '<div style="color:#FFFFFF;background-color:#444444">' + '> ' + fac * 10 + '</div>'; */
+
+        '<div style="color:#FFFFFF;background-color:#444444">' + '0 - ' + fac + '</div>' +
+        '<div style="color:#FFFFFF;background-color:#481567">' + fac + ' - ' + fac * 2 + '</div>' +
+        '<div style="color:#FFFFFF;background-color:#453781">' + fac * 2 + ' - ' + fac * 3 + '</div>' +
+        '<div style="color:#FFFFFF;background-color:#39569C">' + fac * 3 + ' - ' + fac * 4 + '</div>' +
+        '<div style="color:#FFFFFF;background-color:#2D708E">' + fac * 4 + ' - ' + fac * 5 + '</div>' +
+        '<div style="color:#FFFFFF;background-color:#238A8D">' + fac * 5 + ' - ' + fac * 6 + '</div>' +
+        '<div style="background-color:#20A387">' + fac * 6 + ' - ' + fac * 7 + '</div>' +
+        '<div style="background-color:#3CBB75">' + fac * 7 + ' - ' + fac * 8 + '</div>' +
+        '<div style="background-color:#95D840">' + fac * 8 + ' - ' + fac * 9 + '</div>' +
+        '<div style="background-color:#FDE725">' + fac * 9 + ' - ' + fac * 10 + '</div>' +
+        '<div style="background-color:#FFFF99">' + '> ' + fac * 10 + '</div>';
 
     legend.appendChild(div);
 
