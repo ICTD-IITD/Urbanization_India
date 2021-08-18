@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <script src="./js/all.js"></script>
     <script src="./js/n2.js"></script>
     <script src="./js/num2.js"></script>
@@ -14,44 +21,66 @@
 
     <link href="new_style.css" rel="stylesheet" />
 
-    <title>Urbanization</title>
+    <title>GEM - Urbanization</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
-        $(function() {
-            $("#mheader").load("header.html");
-            $("#footer").load("footer.html");
-        });
+      $(function () {
+        $("#mheader").load("header.html");
+        $("#footer").load("footer.html");
+      });
     </script>
-</head>
+  </head>
 
-<body onload="initMap(4)">
+  <body onload="initMap(4)">
     <div id="mheader"></div>
     <div id="demo"></div>
 
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container navbar-inner">
-            <p class="navbar-title">
-                <a class="nav-link" href="">Availability of Amenities</a>
-            </p>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="container navbar-inner">
+        <p class="navbar-title">
+          <a class="nav-link" href="">Availability of Amenities</a>
+        </p>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#topNavbar"
+          aria-controls="topNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
 
-            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="topNavbar">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html">Urbanization
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./datasets.html">Methodology</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div
+          class="navbar-collapse collapse w-100 order-3 dual-collapse2"
+          id="topNavbar"
+        >
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Urbanization </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./datasets.html">Methodology</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 Categories
               </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="./urban.html">Categorising Urban Areas</a
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item" href="./urban.html"
+                  >Categorising Urban Areas</a
                 >
                 <a class="dropdown-item" href="./distribution.html"
                   >Population Distribution in Districts</a
@@ -71,8 +100,8 @@
               <a
                 class="nav-link"
                 target="_blank"
-                href="https://www.cse.iitd.ac.in/~aseth/"
-                >Contact</a
+                href="https://github.com/ICTD-IITD/Urbanization_India"
+                >github</a
               >
             </li>
           </ul>
@@ -94,11 +123,27 @@
             >How many amenities are within accessible distance from the
             different parts of the city?
           </a>
-                            <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#overall-amen" role="tab" aria-controls="overall-amen" aria-selected="true">Overall as a city, what are the number of amenities within
+          <a
+            class="nav-item nav-link"
+            id="nav-home-tab"
+            data-toggle="tab"
+            href="#overall-amen"
+            role="tab"
+            aria-controls="overall-amen"
+            aria-selected="true"
+            >Overall as a city, what are the number of amenities within
             accessible distance?
           </a>
 
-                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#maps" role="tab" aria-controls="maps" aria-selected="false">Maps</a
+          <a
+            class="nav-item nav-link"
+            id="nav-profile-tab"
+            data-toggle="tab"
+            href="#maps"
+            role="tab"
+            aria-controls="maps"
+            aria-selected="false"
+            >Maps</a
           >
         </div>
       </nav>
@@ -319,10 +364,14 @@
               href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf"
               ><img src="./images/assets/paper.png" class="research-paper-img"
             /></a>
-                        </div>
-                        <div class="col-12 col-md-8">
-                            To know more, refer to our research paper here : <br />
-                            <a target="_blank" style="text-decoration: underline" href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf">Characterizing The Evolution Of Indian Cities Using Satellite
+          </div>
+          <div class="col-12 col-md-8">
+            To know more, refer to our research paper here : <br />
+            <a
+              target="_blank"
+              style="text-decoration: underline"
+              href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf"
+              >Characterizing The Evolution Of Indian Cities Using Satellite
               Imagery And Open Street Maps</a
             >
 
@@ -364,5 +413,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <div id="footer"></div></body>
+    <div id="footer"></div>
+  </body>
 </html>

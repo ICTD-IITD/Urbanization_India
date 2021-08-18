@@ -1,123 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link href="new_style.css" rel="stylesheet" />
 
-    <title>Urbanization</title>
+    <title>GEM - Urbanization</title>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
-        $(function() {
-            $("#mheader").load("header.html");
-            $("#footer").load("footer.html");
-        });
+      $(function () {
+        $("#mheader").load("header.html");
+        $("#footer").load("footer.html");
+      });
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="mheader"></div>
 
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container navbar-inner">
-            <p class="navbar-title"><a class="nav-link" href="./index.html">Urbanization</a></p><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="topNavbar">
-                <ul class="navbar-nav ml-auto">
-                    <!-- <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="./datasets.html">Methodology</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"><a class="dropdown-item" href="./urban.html">Categorising Urban Areas</a><a class="dropdown-item" href="./distribution.html">Population Distribution in Districts</a><a class="dropdown-item" href="./accessibility.html">Accessibility of Amenities</a>
-                            <a class="dropdown-item" href="./availibility.html">Availability of Amenities</a><a class="dropdown-item" href="./load.html">Population load on Amenities</a></div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" target="_blank" href="https://www.cse.iitd.ac.in/~aseth/">Contact</a></li>
-                </ul>
-            </div>
+      <div class="container navbar-inner">
+        <p class="navbar-title">
+          <a class="nav-link" href="./index.html">Urbanization</a>
+        </p>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#topNavbar"
+          aria-controls="topNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="navbar-collapse collapse w-100 order-3 dual-collapse2"
+          id="topNavbar"
+        >
+          <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="./datasets.html">Methodology</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Categories
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item" href="./urban.html"
+                  >Categorising Urban Areas</a
+                ><a class="dropdown-item" href="./distribution.html"
+                  >Population Distribution in Districts</a
+                ><a class="dropdown-item" href="./accessibility.html"
+                  >Accessibility of Amenities</a
+                >
+                <a class="dropdown-item" href="./availibility.html"
+                  >Availability of Amenities</a
+                ><a class="dropdown-item" href="./load.html"
+                  >Population load on Amenities</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                target="_blank"
+                href="https://github.com/ICTD-IITD/Urbanization_India"
+                >github</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <div class="container">
-        <div class="main-cards">
-            <div class="row">
-                <a href="./datasets.html" class="col-12 col-md-4">
-                    <div class="card"><img class="card-img-top" src="./images/Methodology.png" alt="Card image cap" />
-                        <div class="card-body">
-                            <p class="card-text">Learn about different datasets and methodology used during research </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="./urban.html" class="col-12 col-md-4">
-                    <div class="card"><img class="card-img-top" src="./images/assets/urban.jpg" alt="Card image cap" />
-                        <div class="card-body">
-                            <p class="card-text">Learn how we categorize urban areas in districts </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="./distribution.html" class="col-12 col-md-4">
-                    <div class="card"><img class="card-img-top" src="./images/assets/distribution.png" alt="Card image cap" />
-                        <div class="card-body">
-                            <p class="card-text">Learn about the population distribution in districts </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="./availibility.html" class="col-12 col-md-4">
-                    <div class="card"><img class="card-img-top" src="./images/assets/availability.webp" alt="Card image cap" />
-                        <div class="card-body">
-                            <p class="card-text">Learn about the availibility of amenities in districts </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="./accessibility.html" class="col-12 col-md-4">
-                    <div class="card"><img class="card-img-top" src="./images/assets/accesibility.gif" alt="Card image cap" />
-                        <div class="card-body">
-                            <p class="card-text">Learn about the accessibility of amenities in districts </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="./load.html" class="col-12 col-md-4">
-                    <div class="card"><img class="card-img-top" src="./images/assets/load.jpg" alt="Card image cap" />
-                        <div class="card-body">
-                            <p class="card-text">Learn about the population load on amenities in districts </p>
-                        </div>
-                    </div>
-                </a>
+      <div class="main-cards">
+        <div class="row">
+          <a href="./datasets.html" class="col-12 col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="./images/Methodology.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Learn about different datasets and methodology used during
+                  research
+                </p>
+              </div>
             </div>
+          </a>
+          <a href="./urban.html" class="col-12 col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="./images/assets/urban.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Learn how we categorize urban areas in districts
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="./distribution.html" class="col-12 col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="./images/assets/distribution.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Learn about the population distribution in districts
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="./availibility.html" class="col-12 col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="./images/assets/availability.webp"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Learn about the availibility of amenities in districts
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="./accessibility.html" class="col-12 col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="./images/assets/accesibility.gif"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Learn about the accessibility of amenities in districts
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="./load.html" class="col-12 col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="./images/assets/load.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Learn about the population load on amenities in districts
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
+      </div>
     </div>
     <div class="container">
-        <div class="main-text">For any district the distribution of various kinds of amenities like school, hospital etc. and population load on these amenities decide their living standards. While, measures like total number of these amenity sites in a district are available
-            through datasets like census of India, there isn’t any information how they are distributed in various regions of the district (especially around urban centres). Our contribution lies in using Google Places & WorldPop data to develop indicators
-            to quantitatively compare living standards of different districts or different regions of a district. Each district’s bounding box is divided into grids of 0.01◦ latitudinal and 0.01◦ longitudinal widths of approximately 1 sq km area. We then
-            identified urbanised grids because amount of built-up pixels in a districts’s satellite image is an indicator of human development activities (like the construction of residential buildings, commercial structures, roads, etc.) in the district,
-            then we used the lat-lon values of various amenity sites from Google Places to develop various accessibility and availability indicators. We then use WorldPop data which gives population at 100m x 100m granularity to analyse the population
-            distribution in these urbanised grids and also to identify the load on amenity sites. This analysis has been done for 7 districts Bangalore, Chennai, Delhi, Gurgaon, Hyderabad, Kolkata and Mumbai.
-            <div class="paper-reference">
-                <div class="row">
-                    <div class="col-12 col-md-3 paper-image-container">
-                        <a target="_blank" href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf"><img src="./images/assets/paper.png" class="research-paper-img" /></a>
-                    </div>
-                    <div class="col-12 col-md-8">To know more, refer to our research paper here: <br /><a target="_blank" style="text-decoration: underline" href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf">Characterizing The Evolution Of Indian Cities Using Satellite Imagery And Open Street Maps</a><br
-                        /><i>C. Bansal,
-        A. Singla,
-        A. K. Singh,
-        H. O. Ahlawat,
-        M. Jain,
-        P. Singh,
-        P. Kumar,
-        R. Saha,
-        S. Taparia,
-        S. Yadav,
-        A. Seth </i><br />ACM COMPASS 2020 </div>
-                </div>
+      <div class="main-text">
+        For any district the distribution of various kinds of amenities like
+        school, hospital etc. and population load on these amenities decide
+        their living standards. While, measures like total number of these
+        amenity sites in a district are available through datasets like census
+        of India, there isn’t any information how they are distributed in
+        various regions of the district (especially around urban centres). Our
+        contribution lies in using Google Places & WorldPop data to develop
+        indicators to quantitatively compare living standards of different
+        districts or different regions of a district. Each district’s bounding
+        box is divided into grids of 0.01◦ latitudinal and 0.01◦ longitudinal
+        widths of approximately 1 sq km area. We then identified urbanised grids
+        because amount of built-up pixels in a districts’s satellite image is an
+        indicator of human development activities (like the construction of
+        residential buildings, commercial structures, roads, etc.) in the
+        district, then we used the lat-lon values of various amenity sites from
+        Google Places to develop various accessibility and availability
+        indicators. We then use WorldPop data which gives population at 100m x
+        100m granularity to analyse the population distribution in these
+        urbanised grids and also to identify the load on amenity sites. This
+        analysis has been done for 7 districts Bangalore, Chennai, Delhi,
+        Gurgaon, Hyderabad, Kolkata and Mumbai.
+        <div class="paper-reference">
+          <div class="row">
+            <div class="col-12 col-md-3 paper-image-container">
+              <a
+                target="_blank"
+                href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf"
+                ><img
+                  src="./images/assets/paper.png"
+                  class="research-paper-img"
+              /></a>
             </div>
+            <div class="col-12 col-md-8">
+              To know more, refer to our research paper here: <br /><a
+                target="_blank"
+                style="text-decoration: underline"
+                href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf"
+                >Characterizing The Evolution Of Indian Cities Using Satellite
+                Imagery And Open Street Maps</a
+              ><br /><i
+                >C. Bansal, A. Singla, A. K. Singh, H. O. Ahlawat, M. Jain, P.
+                Singh, P. Kumar, R. Saha, S. Taparia, S. Yadav, A. Seth </i
+              ><br />ACM COMPASS 2020
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
 
     <div id="footer"></div>
-</body>
-
+  </body>
 </html>

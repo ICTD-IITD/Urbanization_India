@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <script src="./js/all.js"></script>
     <script src="./js/n2.js"></script>
     <script src="./js/num2.js"></script>
@@ -14,25 +21,24 @@
 
     <link href="new_style.css" rel="stylesheet" />
 
-    <title>Urbanization</title>
+    <title>GEM - Urbanization</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
-        $(function() {
-            $("#mheader").load("header.html");
-            $("#footer").load("footer.html");
-        });
+      $(function () {
+        $("#mheader").load("header.html");
+        $("#footer").load("footer.html");
+      });
     </script>
-</head>
+  </head>
 
-<body onload="initMap(2)">
+  <body onload="initMap(2)">
     <div id="mheader"></div>
     <div id="demo"></div>
 
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container navbar-inner">
-            <p class="navbar-title">
-                <a class="nav-link" href="">Population Distribution</a
-          >
+      <div class="container navbar-inner">
+        <p class="navbar-title">
+          <a class="nav-link" href="">Population Distribution</a>
         </p>
         <button
           class="navbar-toggler"
@@ -53,16 +59,28 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="./index.html">Urbanization</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./datasets.html">Methodology</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./datasets.html">Methodology</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 Categories
               </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="./urban.html">Categorising Urban Areas</a
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item" href="./urban.html"
+                  >Categorising Urban Areas</a
                 >
                 <a class="dropdown-item" href="./distribution.html"
                   >Population Distribution in Districts</a
@@ -82,8 +100,8 @@
               <a
                 class="nav-link"
                 target="_blank"
-                href="https://www.cse.iitd.ac.in/~aseth/"
-                >Contact</a
+                href="https://github.com/ICTD-IITD/Urbanization_India"
+                >github</a
               >
             </li>
           </ul>
@@ -104,13 +122,45 @@
             aria-selected="true"
             >How Urbanised are these cities?
           </a>
-                        <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#density" role="tab" aria-controls="density" aria-selected="true">How Densely Populated are they?
+          <a
+            class="nav-item nav-link"
+            id="nav-home-tab"
+            data-toggle="tab"
+            href="#density"
+            role="tab"
+            aria-controls="density"
+            aria-selected="true"
+            >How Densely Populated are they?
           </a>
-                        <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#uniform" role="tab" aria-controls="uniform" aria-selected="true">Is The Population Distribution Uniform?
+          <a
+            class="nav-item nav-link"
+            id="nav-home-tab"
+            data-toggle="tab"
+            href="#uniform"
+            role="tab"
+            aria-controls="uniform"
+            aria-selected="true"
+            >Is The Population Distribution Uniform?
           </a>
-                        <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#max-density" role="tab" aria-controls="max-density" aria-selected="true">Which Parts of Cities are Most Densely Populated?
+          <a
+            class="nav-item nav-link"
+            id="nav-home-tab"
+            data-toggle="tab"
+            href="#max-density"
+            role="tab"
+            aria-controls="max-density"
+            aria-selected="true"
+            >Which Parts of Cities are Most Densely Populated?
           </a>
-                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#maps" role="tab" aria-controls="maps" aria-selected="false">Maps</a
+          <a
+            class="nav-item nav-link"
+            id="nav-profile-tab"
+            data-toggle="tab"
+            href="#maps"
+            role="tab"
+            aria-controls="maps"
+            aria-selected="false"
+            >Maps</a
           >
         </div>
       </nav>
@@ -341,10 +391,14 @@
               href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf"
               ><img src="./images/assets/paper.png" class="research-paper-img"
             /></a>
-                    </div>
-                    <div class="col-12 col-md-8">
-                        To know more, refer to our research paper here : <br />
-                        <a target="_blank" style="text-decoration: underline" href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf">Characterizing The Evolution Of Indian Cities Using Satellite
+          </div>
+          <div class="col-12 col-md-8">
+            To know more, refer to our research paper here : <br />
+            <a
+              target="_blank"
+              style="text-decoration: underline"
+              href="https://www.cse.iitd.ac.in/~aseth/urbanization.pdf"
+              >Characterizing The Evolution Of Indian Cities Using Satellite
               Imagery And Open Street Maps</a
             >
 
@@ -379,5 +433,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <div id="footer"></div></body>
+    <div id="footer"></div>
+  </body>
 </html>
