@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link href="new_style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+
+    <style>
+        body {
+            font-family: 'Montserrat', 'serif';
+            font-size: 14px;
+            overflow: auto;
+            color: #555555;
+            letter-spacing: 0.15px;
+            line-height: 1.5;
+        }
+        
+        .context-dark,
+        .bg-gray-dark,
+        .bg-primary {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer-classic a,
+        .footer-classic a:focus,
+        .footer-classic a:active {
+            color: #ffffff;
+        }
+        
+        .nav-list li {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        
+        .nav-list li a:hover:before {
+            margin-left: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        ul,
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav-list li a:before {
+            content: "\f14f";
+            font: 400 21px/1 "Material Design Icons";
+            color: #292929;
+            display: inline-block;
+            vertical-align: baseline;
+            margin-left: -28px;
+            margin-right: 7px;
+            opacity: 0;
+            visibility: hidden;
+            transition: .22s ease;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .foo {
+                position: relative;
+                top: 600px;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+    <footer class="section footer-classic context-dark bg-image foo" style="background: #292929;">
+        <div class="container">
+            <div class="row row-30">
+                <div class="col-md-6 col-xl-5">
+                    <div class="pr-xl-4">
+                        <p>We are a data analytics team dedicated to uncovering patterns of bias in the social development of India. We are investigating bias themes related to corporate influence on policy making, the political economy, role of the mass
+                            media in influencing public opinion, and inequality in the development of different regions as observed using data from censuses and satellite imagery.
+                        </p>
+                        <!-- Rights-->
+                        <p class="rights"><span>© </span><span class="copyright-year"></span><span> </span><span>2019 GEM team @ IITD.</span><span> All
+								Rights Reserved.</span></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contacts</h5>
+                    <dl class="contact-list">
+                        <dt>Address:</dt>
+                        <dd>ICTD Lab, First Floor, SIT Building</dd>
+                        <dd>IIT Delhi, India</dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dt>primary contact:</dt>
+                        <dd><a href="mailto:#" style="color: white !important;">aseth@cse.iitd.ernet.in</a></dd>
+                    </dl>
+                </div>
+                <div class="col-md-3 col-xl-3">
+                    <h5>Links</h5>
+                    <ul class="nav-list">
+                        <li><a href="index.htm" style="color: white !important; text-decoration: none">About</a></li>
+                        <li><a href="Entities/INTERLOCKS.htm" style="color: white !important; text-decoration: none">Corporate Interlocks</a></li>
+                        <li><a href="Entities/MASSMEDIABASIS.htm" style="color: white !important; text-decoration: none">Media Bias</a></li>
+                        <li><a href="Entities/POLITICALECONOMY.htm" style="color: white !important; text-decoration: none">Political Economy</a></li>
+                        <li><a href="Entities/SOCIO-ECODEV.htm" style="color: white !important; text-decoration: none">Socio-Economic Development</a></li>
+                        <li><a href="link" style="color: white !important; text-decoration: none">Urbanization</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
