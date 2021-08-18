@@ -177,6 +177,9 @@ a {
     font-size: 20px;
     width: 70vw;
   }
+  .navbar {
+    padding-top: 70px;
+  }
 }
 
 .legend {
